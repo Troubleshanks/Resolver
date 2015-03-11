@@ -27,10 +27,7 @@ namespace Resolver.App_Start
                 MongoServer server = client.GetServer();
                 //Establish a conext to connect to database
                 database = server.GetDatabase(Resolver.Properties.Settings.Default.RootDatabase);
-                //Check if thread and platform collection exist, if not create
-
-
-                
+                //Check if thread and platform collection exist, if not create   
             }
             catch (Exception e)
             {
