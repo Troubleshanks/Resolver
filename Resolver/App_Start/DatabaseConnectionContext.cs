@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using MongoDB.Driver;
 using Resolver.Controllers;
+using Resolver.Models;
 
 namespace Resolver.App_Start
 {
@@ -32,12 +33,17 @@ namespace Resolver.App_Start
             catch (Exception e)
             {
                 Console.WriteLine(e);
-               
             }
         }
 
         // TODO create method to return resolver thread objects from database
-        
+        public MongoCollection<Case> Cases
+        {
+            get
+            {
+                return database.GetCollection<Case>("cases");
+            }
+        }
 
 
     }
