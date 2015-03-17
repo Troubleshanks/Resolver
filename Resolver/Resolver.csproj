@@ -175,6 +175,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\ConfigurationController.cs" />
+    <Compile Include="Models\CreateThreadViewModel.cs" />
     <Compile Include="Models\CreateCaseViewModel.cs" />
     <Compile Include="Models\Thread.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
@@ -256,6 +257,7 @@
     <Folder Include="Views\Case\" />
     <Folder Include="Views\Cluster\" />
     <Folder Include="Views\Configuration\" />
+    <Folder Include="Views\CreateThreadViewModel\" />
     <Folder Include="Views\Thread\" />
   </ItemGroup>
   <ItemGroup>

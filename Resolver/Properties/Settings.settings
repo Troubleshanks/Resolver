@@ -12,5 +12,11 @@
     <Setting Name="RootDatabase" Type="System.String" Scope="Application">
       <Value Profile="(Default)">resolver</Value>
     </Setting>
+    <Setting Name="WebsiteTitle" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Resolver v1.0</Value>
+    </Setting>
+    <Setting Name="WebsiteTagline" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Resolve the unexplainable</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

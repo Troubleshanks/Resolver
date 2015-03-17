@@ -41,5 +41,23 @@ namespace Resolver.Properties {
                 return ((string)(this["RootDatabase"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Resolver v1.0")]
+        public string WebsiteTitle {
+            get {
+                return ((string)(this["WebsiteTitle"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Resolve the unexplainable")]
+        public string WebsiteTagline {
+            get {
+                return ((string)(this["WebsiteTagline"]));
+            }
+        }
     }
 }

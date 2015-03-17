@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using MongoDB.Bson;
 using MongoDB.Driver;
+using Resolver.Models;
 
 
 namespace Resolver.Models
@@ -11,6 +12,8 @@ namespace Resolver.Models
     public class Thread
     {
 
+
+        CreateThreadViewModel viewModel;
 
         /// <summary>
         /// Constructor
@@ -21,7 +24,7 @@ namespace Resolver.Models
         }
 
 
-        public Thread(Models.CreateCaseViewModel viewModel)
+        public Thread(Models.CreateThreadViewModel viewModel)
         {
             this.viewModel = viewModel;
 
