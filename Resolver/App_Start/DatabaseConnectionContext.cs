@@ -36,7 +36,7 @@ namespace Resolver.App_Start
             }
         }
 
-        // TODO create method to return resolver thread objects from database
+        // TODO create method to return resolver Case objects from database
         public MongoCollection<Case> Cases
         {
             get
@@ -44,6 +44,15 @@ namespace Resolver.App_Start
                 return database.GetCollection<Case>("cases");
             }
         }
+
+        public MongoCollection<Thread> Threads
+        {
+            get
+            {
+                return database.GetCollection<Thread>("threads");
+            }
+        }
+
 
 
     }
