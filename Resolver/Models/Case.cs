@@ -20,7 +20,7 @@ namespace Resolver.Models
 
       }
 
-
+      
       public Case(Models.CreateCaseViewModel viewModel)
       {
           this.viewModel = viewModel;

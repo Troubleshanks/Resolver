@@ -3,87 +3,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Resolver.App_Start;
 
 namespace Resolver.Controllers
 {
     public class ConfigurationController : Controller
     {
+
+        public DatabaseConnectionContext Context = new DatabaseConnectionContext();
         // GET: Configuration
-        public ActionResult Index()
+        public ActionResult Panel()
         {
+            Context.Database.GetStats();
+            ViewBag.Bits = Context.Database.Server.BuildInfo.Bits;
+            ViewBag.GitVersion = Context.Database.Server.BuildInfo.GitVersion;
+            ViewBag.SysInfo = Context.Database.Server.BuildInfo.SysInfo;
+            ViewBag.Version = Context.Database.Server.BuildInfo.Version;
+            ViewBag.VersionString = Context.Database.Server.BuildInfo.VersionString;
+            ViewBag.ServerAddress = Resolver.Properties.Settings.Default.Server.ToString();
+            ViewBag.DatabaseName = Resolver.Properties.Settings.Default.RootDatabase.ToString();
+
             return View();
         }
 
-        // GET: Configuration/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-
-        // GET: Configuration/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: Configuration/Create
-        [HttpPost]
-        public ActionResult Create(FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: Configuration/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: Configuration/Edit/5
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: Configuration/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: Configuration/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
+ 
     }
 }

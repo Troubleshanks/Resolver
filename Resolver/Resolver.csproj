@@ -251,12 +251,12 @@
     <Content Include="Views\Account\ResetPassword.cshtml" />
     <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Configuration\Panel.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Case\" />
     <Folder Include="Views\Cluster\" />
-    <Folder Include="Views\Configuration\" />
     <Folder Include="Views\CreateThreadViewModel\" />
     <Folder Include="Views\Thread\" />
   </ItemGroup>

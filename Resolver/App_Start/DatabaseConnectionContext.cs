@@ -11,7 +11,7 @@ namespace Resolver.App_Start
     public class DatabaseConnectionContext
     {
         
-        public MongoDatabase database;
+        public MongoDatabase Database;
 
 
         /// <summary>
@@ -27,7 +27,7 @@ namespace Resolver.App_Start
                 //Establish connection with server
                 MongoServer server = client.GetServer();
                 //Establish a conext to connect to database
-                database = server.GetDatabase(Resolver.Properties.Settings.Default.RootDatabase);
+                Database = server.GetDatabase(Resolver.Properties.Settings.Default.RootDatabase);
                 //Check if thread and platform collection exist, if not create   
             }
             catch (Exception e)
@@ -41,7 +41,7 @@ namespace Resolver.App_Start
         {
             get
             {
-                return database.GetCollection<Case>("cases");
+                return Database.GetCollection<Case>("cases");
             }
         }
 
@@ -49,7 +49,7 @@ namespace Resolver.App_Start
         {
             get
             {
-                return database.GetCollection<Thread>("threads");
+                return Database.GetCollection<Thread>("threads");
             }
         }
 

@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Configuration Panel";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div class="ui bottom attached segment">
+    <ul>
+        <li>MongoDB Version @ViewBag.Version</li>
+        <li>@ViewBag.Bits-Bit</li>
+        <li>Git Hash @ViewBag.GitVersion</li>
+        <li>@ViewBag.SysInfo</li>
+        
+    </ul>
+</div>
+<hr/>
+<h2 class="ui top attached header">
+    <div class="content">
+        Server Configuration
+    </div>
+</h2>
+<div class="ui attached segment">
+    <ul>
+        <li>Server Address @ViewBag.ServerAddress</li>
+        <li>Root Database Name @ViewBag.DatabaseName</li>
+    </ul>
+</div>
+<hr />
+
